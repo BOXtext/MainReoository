@@ -7,9 +7,25 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/toCount',
-      name: 'toCount',
-      component: require('../components/toCount')
+      path: '/countAns',
+      name: 'countAns',
+      component: require('../components/commons/countAns.vue')
+    },{
+    	 path: '/',
+      name: 'Home',
+      component: require('../components/Home.vue')
+    },{
+      path: '/dataBrower',
+      name: 'dataBrower',
+      component: require('../components/commons/countAns/dataBrower.vue')
+    },{
+      path: '/tableAns',
+      name: 'tableAns',
+      component: require('../components/commons/tableAns.vue')
+    },{
+      path: '/chart',
+      name: 'chart',
+      component: require('../components/commons/tableAns/chart.vue')
     }
   ]
 })

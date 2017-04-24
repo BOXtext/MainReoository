@@ -6,7 +6,9 @@
          <dg-side></dg-side>
       </el-col>
       <el-col :span="21">
-        <router-view></router-view>
+        
+          <router-view></router-view>
+        
       </el-col>
     </el-row>
     
@@ -14,11 +16,18 @@
 </template>
 
 <script>
+
 import dgSide from './components/commons/dgSide'
 import dgHeader from './components/commons/dgHeader'
 
 export default {
   name: 'app',
+  data(){
+    return {
+      
+     
+    }
+  },
   components:{
     dgSide,
     dgHeader
@@ -41,4 +50,5 @@ export default {
 
   height: 100%;
 }
+
 </style>

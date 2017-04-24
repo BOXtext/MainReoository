@@ -3,10 +3,16 @@
        <el-menu default-active="2" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose">
             <el-submenu index="1">
               <template slot="title"><i class="el-icon-menu"></i>首页</template>
+          
+            <el-menu-item-group>
+              <template slot="title">数据统计</template>
+              <el-menu-item index="1-1" @click="toCount">选项1</el-menu-item>
+              
+            </el-menu-item-group>
               <el-menu-item-group>
-                <el-menu-item index="1-1" @click="toCount">统计</el-menu-item>
-                <el-menu-item index="1-2">分析</el-menu-item>
-              </el-menu-item-group>
+              <template slot="title">图表分析</template>
+              <el-menu-item index="1-1" @click="toAns">选项1</el-menu-item>
+            </el-menu-item-group>
             
             </el-submenu>
 
@@ -30,7 +36,12 @@
     */
     toCount () {
       this.$router.push({
-        name:'toCount'
+        name:'countAns'
+      })
+    }, 
+    toAns() {
+      this.$router.push({
+        name:'tableAns'
       })
     },
     

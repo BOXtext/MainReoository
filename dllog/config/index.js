@@ -23,11 +23,20 @@ module.exports = {
   },
   dev: {
     env: require('./dev.env'),
-    port: 8080,
+    port: 88,
     autoOpenBrowser: true,
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    // 地址映射表，你可以通过设置将复杂的url简化
+    proxyTable: {
+        '/sclog': {
+            target: 'http://192.168.40.128:7777/sclog/',
+            changeOrigin: true,
+            pathRewrite: {
+              '^/sclog': ''
+            }
+        }
+    },
     // CSS Sourcemaps off by default because relative paths are "buggy"
     // with this option, according to the CSS-Loader README
     // (https://github.com/webpack/css-loader#sourcemaps)
