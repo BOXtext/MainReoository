@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <div class="retrieval  criteria header">
+      <h1>Nginx日志管理系统</h1>
        <el-carousel  v-show="IfPic" style="margin:20px;" :interval="4000" type="card" height="">
             <el-carousel-item v-for="item in picList">
               <img :src="item.imgUrl" alt="">

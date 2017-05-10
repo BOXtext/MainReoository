@@ -6,12 +6,12 @@
           
             <el-menu-item-group>
               <template slot="title">数据统计</template>
-              <el-menu-item index="1-1" @click="toCount">选项1</el-menu-item>
+              <el-menu-item index="1-1" @click="toCount">查看列表</el-menu-item>
               
             </el-menu-item-group>
               <el-menu-item-group>
-              <template slot="title">图表分析</template>
-              <el-menu-item index="1-1" @click="toAns">选项1</el-menu-item>
+              <template slot="title">饼图分析</template>
+              <el-menu-item index="1-1" @click="toAns">查看饼图</el-menu-item>
             </el-menu-item-group>
             
             </el-submenu>

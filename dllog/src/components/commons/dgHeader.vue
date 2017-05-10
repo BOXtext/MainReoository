@@ -1,14 +1,7 @@
 <template>
   <div class="dgHeader">
-    	<el-menu theme="dark" :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
-		  <el-menu-item index="1">处理中心</el-menu-item>
-		  <el-submenu index="2" style="float:right;">
-		    <template slot="title">我的工作台</template>
-		    <el-menu-item index="2-1">选项1</el-menu-item>
-		    <el-menu-item index="2-2">选项2</el-menu-item>
-		    <el-menu-item index="2-3">选项3</el-menu-item>
-		  </el-submenu>
-		  <el-menu-item index="3"><a href="https://www.ele.me" target="_blank">订单管理</a></el-menu-item>
+    	<el-menu theme="dark" :default-active="activeIndex" class="dgHeader" mode="horizontal" @select="handleSelect">
+		  <el-menu-item index="1" @click="toLogin">登陆</el-menu-item>
 		</el-menu>
   </div>
 </template>
@@ -25,6 +18,11 @@
      methods: {
       handleSelect(key, keyPath) {
         console.log(key, keyPath);
+      },
+      toLogin() {
+        this.$router.push({
+          name:'login'
+        })
       }
     }
   }
@@ -33,5 +31,8 @@
 <style>
   .dgHeader .el-menu--horizontal .el-menu-item{
 	float: right;
+  }
+  .dgHeader {
+    text-align: center;
   }
 </style>
