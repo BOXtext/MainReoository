@@ -21,6 +21,8 @@
                  <el-menu-item index="2-1" @click="chartGroup('getTraffic')">IP流量分析</el-menu-item>
                 </el-menu-item-group>
               </el-submenu>
+               <el-menu-item index="2" @click="toCount"><i class="el-icon-menu" ></i>查看全部表格</el-menu-item>
+                <el-menu-item index="3" @click="toAns"><i class="el-icon-picture" ></i>查看全部图形数据</el-menu-item>
           </el-menu>
   </div>
 </template>
@@ -38,6 +40,7 @@
     * 统计按钮
     */
     toCount () {
+      console.log("111")
       this.$router.push({
         name:'countAns'
       })
