@@ -10,14 +10,11 @@
               
             </el-menu-item-group>
               <el-menu-item-group>
-              <template slot="title">饼图分析</template>
-              <el-menu-item index="1-1" @click="toAns">查看饼图</el-menu-item>
+              <template slot="title">图形分析</template>
+              <el-menu-item index="1-1" @click="toAns">查看图形数据</el-menu-item>
             </el-menu-item-group>
             
             </el-submenu>
-
-            <el-menu-item index="2"><i class="el-icon-menu"></i>导航二</el-menu-item>
-            <el-menu-item index="3"><i class="el-icon-menu"></i>导航三</el-menu-item>
           </el-menu>
   </div>
 </template>
