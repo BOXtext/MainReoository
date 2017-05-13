@@ -1,6 +1,6 @@
 <template>
   <div class="tableAns">
-        <div class="menu" >
+        <div class="" >
          
           <el-row class="BtnGroup">
             <el-col :span="4">
@@ -227,7 +227,7 @@ import echarts from 'echarts';
 </script>
 
 <style >
-.menu .el-col {
+.tableAns .el-col {
   margin-left: 20px;
 }
 .groupsStyle{

@@ -288,7 +288,7 @@ import echarts from 'echarts';
 </script>
 
 <style >
-.menu .el-button{
+.countAns .el-button{
   width: 220px;
 }
 #bars {

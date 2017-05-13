@@ -31,6 +31,14 @@ export default new Router({
       path: '/chart',
       name: 'chart',
       component: require('../components/commons/tableAns/chart.vue')
+    },{
+      path: '/test',
+      name: 'test',
+      component: require('../components/commons/countAns/test.vue')
+    },{
+      path: '/test1',
+      name: 'test1',
+      component: require('../components/commons/tableAns/test1.vue')
     }
   ]
 })

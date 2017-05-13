@@ -3,18 +3,25 @@
     <div class="menu" >
      <div class="dt">
       <el-row>
-        <el-col :span="4">
-              <el-date-picker
+        <el-col :span="5">
+        <el-date-picker v-if="Summary"
+          v-model="Dates"
+          type="daterange"
+          placeholder="选择日期范围">
+        </el-date-picker>
+
+         <el-date-picker v-if="noSummary"
               v-model="Dates"
               type="date"
               placeholder="选择日期"
              >
             </el-date-picker>
+        
         </el-col>
         <el-col :span="4">
           <el-button type="primary" @click="queryData(tableType, 1)">查询</el-button>
         </el-col>
-        <el-col :span="16">
+        <el-col :span="14">
           <el-button type="primary" @click="queryAll" style="float:right;">查看全部数据</el-button>
       </el-col>
       </el-row>
@@ -255,6 +262,8 @@
           list:[],
           total:0
         },
+        Summary:false,
+        noSummary:true,
         tableType:'',
         IfIP:false,
         IfSM:false,
@@ -424,7 +433,6 @@
       queryData(type, index){
 
         var that = this;
-        console.log(that.Dates);
         let url = 'http://localhost:7777/sclog';
         let str = '2016-10-28';
         
@@ -436,7 +444,18 @@
         switch (type){
           case 'getSummary':
            that.IfSM = true;
-            that.$http.post('/sclog/getSummary',reqData).then( ({data}) => {
+           // let tmpDateF = new Date(that.Dates[0]);
+           // let tmpDateS = new Date(that.Dates[1]);
+           // let startDate = tmpDateF.getFullYear() + '-' + (tmpDateF.getMonth() + 1) + '-' + tmpDateF.getDate();
+
+           // let endDate = tmpDateS.getFullYear() + '-' + (tmpDateS.getMonth() + 1) + '-' + tmpDateS.getDate();
+           // let req = new FormData();
+           //  req.append('startDate',startDate);
+           //  req.append('endDate',endDate);
+           //  req.append('currentPage',index);
+           //  req.append('pageNum',20);
+           //  console.log(req)
+            that.$http.post('/sclog/getAllSummary',reqData).then( ({data}) => {
               if(data.data.data_list == null){
                 that.tableData.list = [];
               }else{
@@ -514,18 +533,30 @@
           break;
         }
         
-      }
+      },
+
+
       
     },
     beforeRouteEnter: function (to, from, next) {
         next( vm => {
+          if(vm.$route.query.tp === 'getSummary'){
+            vm.noSummary = false;
+            vm.Summary = true;
+            vm.orign();
+          }else {
+            vm.noSummary = true;
+            vm.Summary = false;
+          }
           vm.tableType = vm.$route.query.tp; 
           vm.queryData(vm.$route.query.tp,1);
-          vm.orign();
+          
           // console.log(vm.startDate)
         })
     }
   }
+
+
 </script>
 
 <style >

@@ -53,16 +53,16 @@
      addGroup(type) {
           var that = this;
           that.$router.push({
-            name: 'dataBrower',
+            name: 'test',
             query:{
               tp: type
             }
           })
       },
       chartGroup(type) {
-        var vm = this;
-          vm.$router.push({
-            name: 'chart',
+        var that = this;
+          that.$router.push({
+            name: 'test1',
             query:{
               tp: type
             }
