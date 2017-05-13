@@ -6,9 +6,9 @@
                 <el-menu-item-group>
                   <el-menu-item index="1-1" @click="addGroup('getSummary')">数据概况</el-menu-item>
                  <el-menu-item index="1-1" @click="addGroup('getPageview')">页面访问分析</el-menu-item>
-                 <el-menu-item index="1-1" @click="addGroup('getOs')">操作系统</el-menu-item>
-                 <el-menu-item index="1-1" @click="addGroup('getBrowser')">浏览器</el-menu-item>
-                 <el-menu-item index="1-1" @click="addGroup('getTraffic')">IP流量分析</el-menu-item>
+                 <el-menu-item index="1-1" @click="addGroup('getOs')">操作系统数据</el-menu-item>
+                 <el-menu-item index="1-1" @click="addGroup('getBrowser')">浏览器数据</el-menu-item>
+                 <el-menu-item index="1-1" @click="addGroup('getTraffic')">IP流量分析数据</el-menu-item>
                 </el-menu-item-group>
               </el-submenu>
               <el-submenu index="2">
@@ -16,9 +16,9 @@
                 <el-menu-item-group>
                   <el-menu-item index="2-1" @click="chartGroup('getSummary')">数据概况</el-menu-item>
                  <el-menu-item index="2-1" @click="chartGroup('getPageview')">页面访问分析</el-menu-item>
-                 <el-menu-item index="2-1" @click="chartGroup('getOs')">操作系统</el-menu-item>
-                 <el-menu-item index="2-1" @click="chartGroup('getBrowser')">浏览器</el-menu-item>
-                 <el-menu-item index="2-1" @click="chartGroup('getTraffic')">IP流量分析</el-menu-item>
+                 <el-menu-item index="2-1" @click="chartGroup('getOs')">操作系统数据</el-menu-item>
+                 <el-menu-item index="2-1" @click="chartGroup('getBrowser')">浏览器数据</el-menu-item>
+                 <el-menu-item index="2-1" @click="chartGroup('getTraffic')">IP流量分析数据</el-menu-item>
                 </el-menu-item-group>
               </el-submenu>
                <el-menu-item index="2" @click="toCount"><i class="el-icon-menu" ></i>查看全部表格</el-menu-item>

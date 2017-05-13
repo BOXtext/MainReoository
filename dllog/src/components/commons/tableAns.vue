@@ -227,6 +227,9 @@ import echarts from 'echarts';
 </script>
 
 <style >
+.menu .el-col {
+  margin-left: 20px;
+}
 .groupsStyle{
    height: 500px;
     width: 500px;

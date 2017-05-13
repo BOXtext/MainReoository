@@ -288,6 +288,9 @@ import echarts from 'echarts';
 </script>
 
 <style >
+.menu .el-button{
+  width: 220px;
+}
 #bars {
     margin-left: 20px;
     height: 500px;
