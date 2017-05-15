@@ -227,6 +227,9 @@ import echarts from 'echarts';
 </script>
 
 <style >
+.tableAns .el-button{
+  width: 220px;
+}
 .tableAns .el-col {
   margin-left: 20px;
 }
