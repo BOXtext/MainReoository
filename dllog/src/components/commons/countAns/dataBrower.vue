@@ -243,7 +243,7 @@
       </el-table>
       </div>
       <el-pagination v-if="ifAll" :current-page="parseInt(pageCount)" 
-            @current-change="pageChange"   :total="parseInt(tableData.total)" 
+            @current-change="pageChange" :page-size='20'  :total="parseInt(tableData.total)" 
            layout="total, prev, pager, next, jumper" >
         </el-pagination>     
     </div>
