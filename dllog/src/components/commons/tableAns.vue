@@ -27,7 +27,7 @@
               <el-col :span="12">
               <div id="Sum" class="groupsStyle"></div>
               </el-col>
-              <el-col :span="12" >
+              <el-col :span="10" >
               <div id="Page" class="groupsStyle"></div>
               </el-col>
             </el-row>
@@ -35,13 +35,20 @@
               <el-col :span="12">
               <div id="OS" class="groupsStyle"></div>
               </el-col>
-              <el-col :span="12">
+              <el-col :span="10">
               <div id="Brow" class="groupsStyle"></div>
               </el-col>
             </el-row>
           
+           <el-row style="margin-top:20px;">
+              <el-col :span="12">
+              <div id="IP" class="groupsStyle"></div>
+              </el-col>
+              <el-col :span="10">
+              
+              </el-col>
+            </el-row>
           
-          <div id="IP" class="groupsStyle"></div>
         </div>
       </div>
   </div>

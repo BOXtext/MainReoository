@@ -447,26 +447,23 @@
            // let tmpDateF = new Date(that.Dates[0]);
            // let tmpDateS = new Date(that.Dates[1]);
            // let startDate = tmpDateF.getFullYear() + '-' + (tmpDateF.getMonth() + 1) + '-' + tmpDateF.getDate();
-
            // let endDate = tmpDateS.getFullYear() + '-' + (tmpDateS.getMonth() + 1) + '-' + tmpDateS.getDate();
            // let req = new FormData();
            //  req.append('startDate',startDate);
            //  req.append('endDate',endDate);
            //  req.append('currentPage',index);
            //  req.append('pageNum',20);
-           //  console.log(req)
-            that.$http.post('/sclog/getAllSummary',reqData).then( ({data}) => {
+            // console.log(req)
+            that.$http.post('/sclog/getSummary',reqData).then( ({data}) => {
               if(data.data.data_list == null){
                 that.tableData.list = [];
               }else{
                 that.tableData.list = data.data.data_list;
               }
-                
                 that.tableData.total = data.total
             })
           break;
           case 'getPageview':
-         
             that.IfPage = true;
             that.$http.post('sclog/getPageview', reqData).then( ({data}) => {
                   if(data.data.data_list == null){
@@ -477,34 +474,29 @@
                   that.tableData.list[index].pageProportion = that.tableData.list[index].pageProportion/10000 ;
                 });
               }
-               
-                 that.tableData.total = data.total
+                that.tableData.total = data.total
             })
           break;
           case 'getOs':
           
             that.IfOS = true;
             that.$http.post('sclog/getOs', reqData).then( ({data}) => {
-                 
-                  if(data.data.data_list == null){
+              if(data.data.data_list == null){
                 that.tableData.list = [];
               }else{
                 that.tableData.list = data.data.data_list;
                 that.tableData.list.forEach(function (item, index) {
                  that.tableData.list[index].osProportion = that.tableData.list[index].osProportion/10000 ;
                 });
-                 
               }
-                 
-                 that.tableData.total = data.total
+                that.tableData.total = data.total
             })
           break;
           case 'getBrowser':
            
             that.IfBro = true;
             that.$http.post('/sclog/getBrowser', reqData).then( ({data}) => {
-                
-                    if(data.data.data_list == null){
+              if(data.data.data_list == null){
                 that.tableData.list = [];
               }else{
                 that.tableData.list = data.data.data_list;
@@ -512,15 +504,14 @@
                  that.tableData.list[index].broProportion = that.tableData.list[index].broProportion/10000 ;
                 });
               }
-                
-                 that.tableData.total = data.total
+                that.tableData.total = data.total
             })
           break;
           case 'getTraffic':
            
             that.IfIP = true;
             that.$http.post('sclog/getTraffic', reqData).then( ({data}) => {
-                      if(data.data.data_list == null){
+              if(data.data.data_list == null){
                 that.tableData.list = [];
               }else{
                 that.tableData.list = data.data.data_list;
@@ -532,7 +523,6 @@
             })
           break;
         }
-        
       },
 
 
